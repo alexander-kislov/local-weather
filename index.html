@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Local Weather</title>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="author" content="Alexander Kislov">
+    <meta name="copyright" content="Alexander Kislov">
+    <meta name="description" content="Showing weather for your current region using geolocation and openweathermap API">
+    <meta name="keywords" content="local weather, weather">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="shortcut icon" href="img/weather.ico" type="image/x-icon">
+    <link rel="stylesheet" type="text/css" href="css/main.css">
+  </head>
+  <body>
+    <div class="main-wrapper">
+      <div class="city-name"><a id="linkToMap" href="">
+          <h1 id="city-name"></h1></a><span id="country"></span></div>
+      <div class="main-weather">
+        <div class="icon-humidity">
+          <div class="main-humidity"><span>Humidity</span><span id="humidity"></span></div>
+        </div>
+        <div class="icon-temp" id="convertTemp">
+          <div class="main-temp"><span>Temperature</span><span id="temp"></span></div>
+        </div>
+        <div class="line-break-960"></div>
+        <div class="icon-weather"><span id="desc"></span>
+          <div class="border"></div><img id="icon-img" src="">
+        </div>
+        <div class="line-break"></div>
+        <div class="icon-pressure" id="convertPressure">
+          <div class="main-pressure"><span>Pressure</span><span id="pressure"></span><span id="pressureUnits"></span></div>
+        </div>
+        <div class="icon-wind" id="convertWind">
+          <div class="main-wind"><span>Wind Speed</span><span id="wind"></span><span id="windUnits"></span></div>
+        </div>
+      </div>
+      <div class="search-form">
+        <form id="formSubmit" name="log-in-form">
+          <input id="input-city" type="text" name="input-city" placeholder="London, UK" required>
+          <button type="submit" id="searchCity">Search</button>
+        </form>
+      </div>
+    </div>
+    <script src="js/jquery.min.js"></script>
+    <script src="js/main.js"></script>
+  </body>
+</html>
